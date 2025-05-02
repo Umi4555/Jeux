@@ -1,0 +1,91 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chasseur de Bugs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-html.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="home-screen" class="screen active">
+            <div id="terminal-border">
+                <div class="terminal-header">
+                    <a href="https://umi4555.github.io/Lyc-e/" class="back-to-school-btn">Retour à l'accueil</a>
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <div class="terminal-content">
+                    <h1>Chasseur de Bugs</h1>
+                    <div id="language-selection">
+                        <h2>Choisissez votre langage de débogage</h2>
+                        <div class="language-grid">
+                            <button class="language-btn" data-lang="python">
+                                <span>Python</span>
+                                <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python">
+                            </button>
+                            <button class="language-btn" data-lang="javascript">
+                                <span>JavaScript</span>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+                            </button>
+                            <button class="language-btn" data-lang="html">
+                                <span>HTML</span>
+                                <img src="https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" alt="HTML">
+                            </button>
+                            <button class="language-btn" data-lang="css">
+                                <span>CSS</span>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div id="terminal-border">
+                <div class="terminal-header">
+                    <button id="back-to-home" class="back-btn">Retour</button>
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                </div>
+                <div class="terminal-content">
+                    <h1>Chasseur de Bugs</h1>
+                    <div id="code-challenge">
+                        <div class="challenge-header">
+                            <span id="current-language-label">LANGAGE</span>
+                            <button id="change-challenge">Nouveau Défi</button>
+                        </div>
+                        <div id="code-display-container">
+                            <pre><code id="code-display" class="language-"></code></pre>
+                        </div>
+                        <p id="challenge-description"></p>
+                    </div>
+
+                    <div id="debug-section">
+                        <textarea id="debug-input" placeholder="Collez votre code corrigé ici"></textarea>
+                        <div class="action-buttons">
+                            <button id="submit-debug">CORRIGER</button>
+                            <button id="show-solution">VOIR SOLUTION</button>
+                        </div>
+                    </div>
+
+                    <div id="result-area">
+                        <p id="result-message"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
